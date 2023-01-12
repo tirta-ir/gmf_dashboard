@@ -1,0 +1,76 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Jan 12, 2023 at 03:44 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `DMS`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ncr_initial`
+--
+
+CREATE TABLE `ncr_initial` (
+  `ncr_init_id` int(4) NOT NULL,
+  `audit_plan_no` varchar(255) NOT NULL,
+  `ncr_nbr` varchar(255) NOT NULL,
+  `issued_date` date NOT NULL,
+  `responsible_office` varchar(255) NOT NULL,
+  `audit_type` varchar(255) NOT NULL,
+  `to_uic` varchar(255) NOT NULL,
+  `attention` varchar(255) NOT NULL,
+  `required_condition_reff` varchar(255) NOT NULL,
+  `level_finding` varchar(255) NOT NULL,
+  `ncr_due_date` date NOT NULL,
+  `problem_analisys` int(1) NOT NULL,
+  `answer_due_date` date NOT NULL,
+  `issue_ian` int(1) NOT NULL,
+  `ian_nbr` varchar(255) NOT NULL,
+  `encountered_condition` varchar(255) NOT NULL,
+  `audited_by` varchar(255) NOT NULL,
+  `date_send` date NOT NULL,
+  `accepted_by` varchar(255) NOT NULL,
+  `accepted_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `ncr_initial`
+--
+ALTER TABLE `ncr_initial`
+  ADD PRIMARY KEY (`ncr_init_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ncr_initial`
+--
+ALTER TABLE `ncr_initial`
+  MODIFY `ncr_init_id` int(4) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
